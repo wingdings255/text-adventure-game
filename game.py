@@ -55,7 +55,8 @@ def death():
     print(name + " HAS DIED!!! R.I.P")
     print("----------------------")
     if str(eggs) >= "0":
-        print("You finished with" + " " + str(eggs) + " " + "eastereggs")
+        print("You finished with " + str(eggs) + " " + "eastereggs")
+        print("You finished with " + gold + " gold")
     quit()
 
 
