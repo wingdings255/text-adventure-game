@@ -15,6 +15,7 @@ quests = []
 
 global eggs
 eggs = 0
+
 global name
 
 print("Halt! Who goes there? State your name.")
@@ -38,6 +39,7 @@ def start():
     print("---------------------------------------------------------------")
     print(" ")
     print("1). Accept the fish")
+    print("Costs 5 gold")
     print(" ")
     print("2). Decline the fish")
     ans=input()
@@ -59,6 +61,8 @@ def sequence1_section2_yes():
     print("<<you now have" + " " + str(gold) +  " " + "gold>>" )
     for x in inv:
       print("<<Your inventory is:" + " " + x + " " + ">>")
+    quests.append("bear")
+    print("!Your quests have been updates. Visit the Tavern to see avalible quests!")
     time.sleep(5)
     sequence2_section1()
 
@@ -88,7 +92,7 @@ def sequence2_section1():
 def tavern ():
     global name
     global gold
-
+    global quests
 
 
 
