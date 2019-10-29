@@ -70,8 +70,8 @@ def sequence1_section2_no():
     print("----------------------")
     print("YOU HAVE DIED!!! R.I.P")
     print("----------------------")
-    #if int(eggs) >= "1":
-    #    print("you have finished with" + str(eggs) + "easter eggs discovered")
+    if str(eggs) >= "0":
+        print("You finished with" + " " + str(eggs) + " " + "eastereggs")
     quit()
 
 
