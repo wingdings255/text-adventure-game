@@ -45,6 +45,16 @@ def start():
     if ans == "2":
         sequence1_section2_no()
 
+def death ():
+    global gold
+    global eggs
+    global name
+    print("----------------------")
+    print(name + " HAS DIED!!! R.I.P")
+    print("----------------------")
+    if str(eggs) >= "0":
+        print("You finished with" + " " + str(eggs) + " " + "eastereggs")
+    quit()
 
 def sequence1_section2_yes():
     global gold
@@ -67,12 +77,8 @@ def sequence1_section2_no():
     global eggs
     os.system('clear')
     print("The fishmonger stabs you in the neck and you die")
-    print("----------------------")
-    print("YOU HAVE DIED!!! R.I.P")
-    print("----------------------")
-    if str(eggs) >= "0":
-        print("You finished with" + " " + str(eggs) + " " + "eastereggs")
-    quit()
+    time.sleep(2)
+    death()
 
 
 def thief_easteregg():
