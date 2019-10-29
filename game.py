@@ -6,10 +6,10 @@ global gold
 gold = 100
 
 global inv
-inv = []
+inv = ["Rusty Sword", ]
 
 global quests
-quests = []
+quests = ["Test", ]
 
 global eggs
 eggs = 0
@@ -17,7 +17,7 @@ eggs = 0
 global name
 
 print("Halt! Who goes there? State your name.")
-name=input()
+name = input("Enter your name:  ")
 print("Welcome to Audale " + name)
 time.sleep(3)
 
@@ -39,13 +39,15 @@ def start():
     print("Costs 5 gold")
     print(" ")
     print("2). Decline the fish")
-    ans=input()
+    # TODO: add and else that loops back to the original question
+    ans = input()
     if ans == "1":
         sequence1_section2_yes()
     if ans == "2":
         sequence1_section2_no()
 
-def death ():
+
+def death():
     global gold
     global eggs
     global name
@@ -55,6 +57,7 @@ def death ():
     if str(eggs) >= "0":
         print("You finished with" + " " + str(eggs) + " " + "eastereggs")
     quit()
+
 
 def sequence1_section2_yes():
     global gold
@@ -108,11 +111,18 @@ def tavern():
     print("1). yes")
     print("")
     print("2.) no")
-    ans=input()
+    ans = input()
     if ans == "1":
-        time.sleep(2)
+        print("Your you have [" + str(len(quests)) + "] quests")
+        time.sleep(3)
         for x in quests:
-            print("Your quests include [" + x + "]")
+            print("Quest: " + x)
+        ans = input("What quest do you want to begin:   ")
+        if ans == quests[1]:
+            print("you have chosen the " + quests[1] + " quest")
+            quest_bear()
+        elif ans == quests[2]:
+            print("This is a test quest and does not exist")
     elif ans == "2":
         print("What do you mean no? this is literally the only thing you can do in the tavern so far")
         tavern()
