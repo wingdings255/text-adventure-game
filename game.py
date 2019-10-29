@@ -67,7 +67,7 @@ def sequence1_section2_yes():
     print("<<you now have" + " " + str(gold) + " " + "gold>>")
     for x in inv:
         print("<<Your inventory is:" + " " + x + " " + ">>")
-    quests.append("bear")
+    quests.append("Bear")
     print("!Your quests have been updates. Visit the Tavern to see avalible quests!")
     time.sleep(5)
     sequence2_section1()
@@ -93,12 +93,33 @@ def thief_easteregg():
 def sequence2_section1():
     os.system('clear')
     print("You place your fish in your bag and continue riding through the town")
+    print("As you ride through the town, you hear a loud crash and men yelling.")
+    print("You correctly assume it is a tavern.")
+    print("You ride up and tether your horse to a pole and head on in")
+    tavern()
 
 
 def tavern():
     global name
     global gold
     global quests
+    print("Welcome to the Tavern " + name + " would you like to view quests?")
+    print("")
+    print("1). yes")
+    print("")
+    print("2.) no")
+    ans=input()
+    if ans == "1":
+        time.sleep(2)
+        for x in quests:
+            print("Your quests include [" + x + "]")
+    elif ans == "2":
+        print("What do you mean no? this is literally the only thing you can do in the tavern so far")
+        tavern()
+
+
+def quest_bear():
+    print("Thank you for accepting this quest " + name)
 
 
 start()
