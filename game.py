@@ -10,6 +10,9 @@ gold = 100
 global inv
 inv = []
 
+global quests
+quests = []
+
 global eggs
 eggs = 0
 global name
@@ -58,7 +61,7 @@ def sequence1_section2_yes():
       print("<<Your inventory is:" + " " + x + " " + ">>")
     time.sleep(5)
     sequence2_section1()
-    
+
 def sequence1_section2_no():
     global eggs
     os.system('clear')
@@ -81,6 +84,10 @@ def thief_easteregg():
 def sequence2_section1():
     os.system('clear')
     print("You place your fish in your bag and continue riding through the town")
+
+def tavern ():
+    global name
+    global gold
 
 
 
