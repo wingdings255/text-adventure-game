@@ -86,9 +86,9 @@ def sequence1_section2_no():
 
 
 def thief_easteregg():
+    global eggs
     print ("--------------------------------------")
     print ("!!Congrats, you found an easteregg!!")
-    global eggs
     eggs = eggs+1
     print("!!you now have discovered" + " " + "<" + str(eggs) + ">" + " " + "eastereggs!!")
     print("-----------------------------------------------------------------")
