@@ -122,14 +122,18 @@ def tavern():
         if ans == quests[1]:
             print("you have chosen the " + quests[1] + " quest")
             quest_bear()
-        elif ans == quests[2]:
+        elif ans == quests[0]:
             print("This is a test quest and does not exist")
+        else:
+            print("Quest not found")
+            tavern()
     elif ans == "2":
         print("What do you mean no? this is literally the only thing you can do in the tavern so far")
         tavern()
 
 
 def quest_bear():
+    global name
     print("Thank you for accepting this quest " + name)
 
 
