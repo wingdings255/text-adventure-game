@@ -86,9 +86,9 @@ def sequence1_section2_no():
 
 
 def thief_easteregg():
-    print ("--------------------------------------")
-    print ("!!Congrats, you found an easteregg!!")
     global eggs
+    print("--------------------------------------")
+    print("!!Congrats, you found an easteregg!!")
     eggs = eggs+1
     print("!!you now have discovered" + " " + "<" + str(eggs) + ">" + " " + "eastereggs!!")
     print("-----------------------------------------------------------------")
@@ -122,14 +122,18 @@ def tavern():
         if ans == quests[1]:
             print("you have chosen the " + quests[1] + " quest")
             quest_bear()
-        elif ans == quests[2]:
+        elif ans == quests[0]:
             print("This is a test quest and does not exist")
+        else:
+            print("Quest not found")
+            tavern()
     elif ans == "2":
         print("What do you mean no? this is literally the only thing you can do in the tavern so far")
         tavern()
 
 
 def quest_bear():
+    global name
     print("Thank you for accepting this quest " + name)
 
 
