@@ -40,7 +40,7 @@ def start():
     print(" ")
     print("2). Decline the fish")
     # TODO: add and else that loops back to the original question
-    ans = input()
+    ans = input("1 or 2: ")
     if ans == "1":
         sequence1_section2_yes()
     if ans == "2":
@@ -112,7 +112,7 @@ def tavern():
     print("1). yes")
     print("")
     print("2.) no")
-    ans = input()
+    ans = input("1 or 2: ")
     if ans == "1":
         print("Your you have [" + str(len(quests)) + "] quests")
         time.sleep(3)
