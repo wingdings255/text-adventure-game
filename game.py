@@ -36,7 +36,7 @@ def start():
     print("---------------------------------------------------------------")
     print(" ")
     print("1). Accept the fish")
-    print("Costs 5 gold")
+    print("->  Costs 5 gold")
     print(" ")
     print("2). Decline the fish")
     # TODO: add and else that loops back to the original question
