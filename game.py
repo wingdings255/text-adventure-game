@@ -2,6 +2,15 @@
 import os
 import time
 
+global os
+ostype = os.name
+
+global clearcmd
+if ostype == "nt":
+    clearcmd = 'cls'
+elif ostype == "unix":
+    clearcmd == 'clear'
+
 global gold
 gold = 100
 
@@ -24,8 +33,9 @@ time.sleep(3)
 
 def start():
     global name
+    global clearcmd
     global gold
-    os.system('clear')
+    os.system(clearcmd)
     if name == "garet":
         thief_easteregg()
     print("As you enter the town you look around at the shops and booths.")
@@ -48,9 +58,11 @@ def start():
 
 
 def death():
+    global clearcmd
     global gold
     global eggs
     global name
+    os.system(clearcmd)
     print("----------------------")
     print(name + " HAS DIED!!! R.I.P")
     print("----------------------")
@@ -63,7 +75,7 @@ def death():
 def sequence1_section2_yes():
     global gold
     global inv
-    os.system('clear')
+    os.system(clearcmd)
     print("Thank you for your purchase" + " " + name)
     print("The fishmonger takes 5 gold and gives you the fish")
     inv.append("Fish")
@@ -79,7 +91,7 @@ def sequence1_section2_yes():
 
 def sequence1_section2_no():
     global eggs
-    os.system('clear')
+    os.system(clearcmd)
     print("The fishmonger stabs you in the neck and you die")
     time.sleep(2)
     death()
@@ -95,7 +107,7 @@ def thief_easteregg():
 
 
 def sequence2_section1():
-    os.system('clear')
+    os.system(clearcmd)
     print("You place your fish in your bag and continue riding through the town")
     print("As you ride through the town, you hear a loud crash and men yelling.")
     print("You correctly assume it is a tavern.")
