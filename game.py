@@ -8,8 +8,8 @@ ostype = os.name
 global clearcmd
 if ostype == "nt":
     clearcmd = 'cls'
-elif ostype == "unix":
-    clearcmd == 'clear'
+elif ostype == "posix":
+    clearcmd = 'clear'
 
 global gold
 gold = 100
