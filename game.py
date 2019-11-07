@@ -172,6 +172,8 @@ def tavern():
 def quest_bear():
     global name
     print("Thank you for accepting this quest " + name)
+    print("There is a large bear that is terorizing our hunters in the woods outside the village")
+    print("You will be paid hansomly to take care of this pest")
 
 
 start()
