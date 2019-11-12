@@ -18,7 +18,7 @@ global inv
 inv = ["Rusty Sword", ]
 
 global quests
-quests = []
+quests = ["Test",  ]
 
 global eggs
 eggs = 0
