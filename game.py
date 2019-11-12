@@ -18,7 +18,7 @@ global inv
 inv = ["Rusty Sword", ]
 
 global quests
-quests = ["Test", ]
+quests = []
 
 global eggs
 eggs = 0
@@ -148,32 +148,36 @@ def tavern():
     ans = input("1 or 2: ")
     if ans == "1":
         print("Your you have [" + str(len(quests)) + "] quests")
-        time.sleep(3)
-        for x in quests:
-            print("Quest: " + x)
-        ans = input("What quest do you want to begin:   ")
-        if ans == quests[1]:
-            print("you have chosen the " + quests[1] + " quest")
-            time.sleep(2)
-            quest_bear()
-        elif ans == quests[0]:
-            print("This is a test quest and does not exist")
-            time.sleep(2)
-            tavern()
-        else:
-            print("Quest not found")
-            time.sleep(2)
-            tavern()
+        questchoose()
     elif ans == "2":
         print("What do you mean no? this is literally the only thing you can do in the tavern so far")
         tavern()
 
+
+def questchoose():
+    global quests
+    global name
+    os.system(clearcmd)
+    print("Your you have [" + str(len(quests)) + "] quests")
+    time.sleep(3)
+    for x in quests:
+        print("Quest: " + x)
+    ans = input("What quest do you want to begin:   ")
+    if ans == quests[0]:
+        print("you have chosen the " + quests[0] + " quest")
+        time.sleep(2)
+        quest_bear()
+    else:
+        print("Quest not found")
+        questchoose()
 
 def quest_bear():
     global name
     print("Thank you for accepting this quest " + name)
     print("There is a large bear that is terorizing our hunters in the woods outside the village")
     print("You will be paid hansomly to take care of this pest")
+    print("You leave the Tavern and make your way to the bears cave")
+    time.sleep(2)
 
 
 start()
