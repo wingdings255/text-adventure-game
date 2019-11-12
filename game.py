@@ -147,7 +147,7 @@ def tavern():
     print("2.) no")
     ans = input("1 or 2: ")
     if ans == "1":
-        print("Your you have [" + str(len(quests)) + "] quests")
+        print("You have [" + str(len(quests)) + "] quests")
         questchoose()
     elif ans == "2":
         print("What do you mean no? this is literally the only thing you can do in the tavern so far")
@@ -158,7 +158,7 @@ def questchoose():
     global quests
     global name
     os.system(clearcmd)
-    print("Your you have [" + str(len(quests)) + "] quests")
+    print("You have [" + str(len(quests)) + "] quests")
     time.sleep(3)
     for x in quests:
         print("Quest: " + x)
