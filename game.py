@@ -18,7 +18,7 @@ global inv
 inv = ["Rusty Sword", ]
 
 global quests
-quests = ["Test",  ]
+quests = ["Test", ]
 
 global eggs
 eggs = 0
@@ -89,7 +89,7 @@ def sequence1_section2_yes():
     time.sleep(2)
     for x in inv:
         print("-------------------------------------------")
-        print("Your inventory is:" + " " + x )
+        print("Your inventory is:" + " " + x)
     quests.append("Bear")
     print("-------------------------------------------")
     time.sleep(2)
@@ -110,7 +110,7 @@ def thief_easteregg():
     global eggs
     print("--------------------------------------")
     print("!!Congrats, you found an easteregg!!")
-    eggs = eggs+1
+    eggs = eggs + 1
     print("!!you now have discovered" + " " + "<" + str(eggs) + ">" + " " + "eastereggs!!")
     print("-----------------------------------------------------------------")
 
@@ -170,6 +170,7 @@ def questchoose():
     else:
         print("Quest not found")
         questchoose()
+
 
 def quest_bear():
     global name
