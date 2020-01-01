@@ -2,7 +2,7 @@
 import os
 import time
 
-global os
+global ostype
 ostype = os.name
 
 global clearcmd
