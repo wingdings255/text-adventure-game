@@ -40,11 +40,10 @@ def start():
     if name == "garet":
         thief_easteregg()
     print("As you enter the town you look around at the shops and booths.")
-    print("---------------------------------------------------------------")
     print("A fish monger runs up to you and ask's if you want to buy a fish")
     print("He wreaks of dead fish so you can assume his stock cant be the best")
     print("you have" + " " + str(gold) + " " + "gold")
-    print("---------------------------------------------------------------")
+    print("----------------------")
     time.sleep(4)
     print(" ")
     print("1). Accept the fish")
@@ -88,10 +87,10 @@ def sequence1_section2_yes():
     print("<<you now have" + " " + str(gold) + " " + "gold>>")
     time.sleep(2)
     for x in inv:
-        print("-------------------------------------------")
+        print("----------------------")
         print("Your inventory is:" + " " + x)
     quests.append("Bear")
-    print("-------------------------------------------")
+    print("----------------------")
     time.sleep(2)
     print("!Your quests have been updates. Visit the Tavern to see avalible quests!")
     time.sleep(6)
@@ -108,11 +107,11 @@ def sequence1_section2_no():
 
 def thief_easteregg():
     global eggs
-    print("--------------------------------------")
+    print("----------------------")
     print("!!Congrats, you found an easteregg!!")
     eggs = eggs + 1
     print("!!you now have discovered" + " " + "<" + str(eggs) + ">" + " " + "eastereggs!!")
-    print("-----------------------------------------------------------------")
+    print("----------------------")
 
 
 def sequence2_section1():
@@ -121,7 +120,7 @@ def sequence2_section1():
     print("You place your fish in your bag and continue riding through the town")
     print("As you ride through the town, you hear a loud crash and men yelling.")
     print("You correctly assume it is a tavern.")
-    print("---------------------------------------------------------------------")
+    print("----------------------")
     print("Would you like to enter the tavern??")
     print("1).  Yes")
     print("2).  No")
