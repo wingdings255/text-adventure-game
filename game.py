@@ -40,7 +40,7 @@ def start():
     if name == "garet":
         thief_easteregg()
     print("As you enter the town you look around at the shops and booths.")
-    print("A fish monger runs up to you and ask's if you want to buy a fish")
+    print("A fish monger runs up to you and asks if you want to buy a fish")
     print("He wreaks of dead fish so you can assume his stock cant be the best")
     print("you have" + " " + str(gold) + " " + "gold")
     print("----------------------")
@@ -92,7 +92,7 @@ def sequence1_section2_yes():
     quests.append("Bear")
     print("----------------------")
     time.sleep(2)
-    print("!Your quests have been updates. Visit the Tavern to see avalible quests!")
+    print("!Your quests have been updates. Visit the Tavern to see available quests!")
     time.sleep(6)
     sequence2_section1()
 
@@ -174,8 +174,8 @@ def questchoose():
 def quest_bear():
     global name
     print("Thank you for accepting this quest " + name)
-    print("There is a large bear that is terorizing our hunters in the woods outside the village")
-    print("You will be paid hansomly to take care of this pest")
+    print("There is a large bear that is terrorizing our hunters in the woods outside the village")
+    print("You will be paid handsomely to take care of this pest")
     print("You leave the Tavern and make your way to the bears cave")
     time.sleep(2)
 
