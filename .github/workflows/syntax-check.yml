@@ -1,0 +1,19 @@
+name: Syntax Check
+
+on:
+  [push, pull_request]
+    branches: [master]
+
+jobs:
+  Flake:
+    name: Check Python Syntax with Flake
+      runs-on: ubuntu-latest
+        Steps:
+          - name: Checkout branch
+          - uses: actions/checkout@v2
+          - name: Run Flake8
+          - uses: actions/setup-python@v2
+              with:
+                python-version: "3.8"
+          - name: Run flake8
+          - uses: julianwachholz/flake8-action@v1
