@@ -2,7 +2,7 @@
 import os
 import time
 
-global os
+global ostype
 ostype = os.name
 
 global clearcmd
@@ -40,11 +40,10 @@ def start():
     if name == "garet":
         thief_easteregg()
     print("As you enter the town you look around at the shops and booths.")
-    print("---------------------------------------------------------------")
-    print("A fish monger runs up to you and ask's if you want to buy a fish")
+    print("A fish monger runs up to you and asks if you want to buy a fish")
     print("He wreaks of dead fish so you can assume his stock cant be the best")
     print("you have" + " " + str(gold) + " " + "gold")
-    print("---------------------------------------------------------------")
+    print("----------------------")
     time.sleep(4)
     print(" ")
     print("1). Accept the fish")
@@ -88,12 +87,12 @@ def sequence1_section2_yes():
     print("<<you now have" + " " + str(gold) + " " + "gold>>")
     time.sleep(2)
     for x in inv:
-        print("-------------------------------------------")
-        print("Your inventory is:" + " " + x )
+        print("----------------------")
+        print("Your inventory is:" + " " + x)
     quests.append("Bear")
-    print("-------------------------------------------")
+    print("----------------------")
     time.sleep(2)
-    print("!Your quests have been updates. Visit the Tavern to see avalible quests!")
+    print("!Your quests have been updates. Visit the Tavern to see available quests!")
     time.sleep(6)
     sequence2_section1()
 
@@ -108,11 +107,11 @@ def sequence1_section2_no():
 
 def thief_easteregg():
     global eggs
-    print("--------------------------------------")
+    print("----------------------")
     print("!!Congrats, you found an easteregg!!")
-    eggs = eggs+1
+    eggs = eggs + 1
     print("!!you now have discovered" + " " + "<" + str(eggs) + ">" + " " + "eastereggs!!")
-    print("-----------------------------------------------------------------")
+    print("----------------------")
 
 
 def sequence2_section1():
@@ -121,7 +120,7 @@ def sequence2_section1():
     print("You place your fish in your bag and continue riding through the town")
     print("As you ride through the town, you hear a loud crash and men yelling.")
     print("You correctly assume it is a tavern.")
-    print("---------------------------------------------------------------------")
+    print("----------------------")
     print("Would you like to enter the tavern??")
     print("1).  Yes")
     print("2).  No")
@@ -147,33 +146,38 @@ def tavern():
     print("2.) no")
     ans = input("1 or 2: ")
     if ans == "1":
-        print("Your you have [" + str(len(quests)) + "] quests")
-        time.sleep(3)
-        for x in quests:
-            print("Quest: " + x)
-        ans = input("What quest do you want to begin:   ")
-        if ans == quests[1]:
-            print("you have chosen the " + quests[1] + " quest")
-            time.sleep(2)
-            quest_bear()
-        elif ans == quests[0]:
-            print("This is a test quest and does not exist")
-            time.sleep(2)
-            tavern()
-        else:
-            print("Quest not found")
-            time.sleep(2)
-            tavern()
+        print("You have [" + str(len(quests)) + "] quests")
+        questchoose()
     elif ans == "2":
         print("What do you mean no? this is literally the only thing you can do in the tavern so far")
         tavern()
 
 
+def questchoose():
+    global quests
+    global name
+    os.system(clearcmd)
+    print("You have [" + str(len(quests)) + "] quests")
+    time.sleep(3)
+    for x in quests:
+        print("Quest: " + x)
+    ans = input("What quest do you want to begin:   ")
+    if ans == quests[0]:
+        print("you have chosen the " + quests[0] + " quest")
+        time.sleep(2)
+        quest_bear()
+    else:
+        print("Quest not found")
+        questchoose()
+
+
 def quest_bear():
     global name
     print("Thank you for accepting this quest " + name)
-    print("There is a large bear that is terorizing our hunters in the woods outside the village")
-    print("You will be paid hansomly to take care of this pest")
+    print("There is a large bear that is terrorizing our hunters in the woods outside the village")
+    print("You will be paid handsomely to take care of this pest")
+    print("You leave the Tavern and make your way to the bears cave")
+    time.sleep(2)
 
 
 start()
